@@ -52,33 +52,7 @@ export default {
   pwa: {
     manifest: {
       lang: 'en'
-    },
-    icon: [
-      {
-      src: '/static/quran_64x64.png',
-      sizes: '64x64',
-      type: 'image/png',
-      purpose: 'any maskable'
-      },
-      {
-      src: '/static/quran_120x120.png',
-      sizes: '120x120',
-      type: 'image/png',
-      purpose: 'any maskable'
-      },
-      {
-      src: '/static/quran_144x144.png',
-      sizes: '144x144',
-      type: 'image/png',
-      purpose: 'any maskable'
-      },
-      {
-      src: '/static/quran_152x152.png',
-      sizes: '144x144',
-      type: 'image/png',
-      purpose: 'any maskable'
-      },
-    ]
+    }
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

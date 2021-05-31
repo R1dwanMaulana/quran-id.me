@@ -1,20 +1,18 @@
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.getRegistrations().then((registrations) => {
-    for (const registration of registrations) {
-      console.info('[pwa] [workbox] Unregistering service worker:', registration)
-      registration.unregister()
-    }
+async function register() {
+  if (!'serviceWorker' in navigator) {
+    throw new Error('serviceWorker is not supported in current browser!')
+  }
+
+  const { Workbox } = await import('workbox-cdn/workbox/workbox-window.prod.es5.mjs')
+
+  const workbox = new Workbox('/sw.js', {
+    scope: '/'
   })
+
+  await workbox.register()
+
+  return workbox
 }
 
-if ('caches' in window) {
-  caches.keys()
-    .then((keys) => {
-      if (keys.length) {
-        console.info('[pwa] [workbox] Cleaning cache for:', keys.join(', '))
-        for (const key of keys) {
-          caches.delete(key)
-        }
-      }
-    })
-}
+window.$workbox = register()
+  .catch(error => {})
