@@ -6,7 +6,7 @@
       <br>
       <hr>
         <p class="text-left m-4 font-medium">List Surah :</p>
-        <div v-for="surah in surah.data" :key="surah.id" class="h-auto text-left w-auto py-6 px-4 m-4 rounded-lg hover:shadow-lg text-black border">
+        <div v-for="surah in surah.data" :key="surah.number" class="h-auto text-left w-auto py-6 px-4 m-4 rounded-lg hover:shadow-lg text-black border">
           <ul>
             <li><p>Nama Surah : {{surah.name.transliteration.id}}</p></li>
             <li><p>Diturunkan : {{surah.revelation.id}}</p></li>
@@ -18,12 +18,12 @@
               </button>
             </div>
             <div class="dropdown inline">
-              <button class="bg-gray-300 shadow-md hover:shadow-none rounded-md text-gray-700 font-semibold py-2 px-4 rounded inline-flex items-center">
+              <button @click="clickShow(surah.number)" class="bg-gray-300 shadow-md hover:shadow-none rounded-md text-gray-700 font-semibold py-2 px-4 rounded inline-flex items-center">
                 <span class="mr-1">Tafsir</span>
                 <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/> </svg>
               </button>
-              <ul class="pb-3 dropdown-menu hidden text-gray-700 pt-1">
-                <li class=""><a class="rounded-md bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap">{{surah.tafsir.id}}</a></li>
+              <ul v-show="showTafsir[surah.number]" class="pb-3 text-gray-700 pt-1">
+                <li><a class="rounded-md bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap">{{surah.tafsir.id}}</a></li>
               </ul>
             </div>
           </ul>
@@ -38,6 +38,30 @@ export default {
   async asyncData({ $axios }) {
     const surah = await $axios.$get('/surah')
     return { surah }
+  },
+  data() {
+    return {
+      showTafsir: {}
+    }
+  },
+  methods: {
+    clickShow(id) {
+      console.log('before', this.showTafsir)
+      if(this.showTafsir[id]) {
+        // object baru
+        this.showTafsir = {
+          // object lama dipanggil lagi, lalu id nya di set ke false
+          ...this.showTafsir, 
+          [id]: false
+        }
+      } else {
+        this.showTafsir = {
+          ...this.showTafsir, 
+          [id]: true
+        }
+      }
+      console.log('after', this.showTafsir)
+    }
   }
 }
 </script>
@@ -86,10 +110,6 @@ export default {
 
 .links {
   padding-top: 15px;
-}
-
-.dropdown:hover  .dropdown-menu {
-  display: flex;
 }
 
 </style>
