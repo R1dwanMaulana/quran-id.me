@@ -12,18 +12,20 @@
             <li><p>Diturunkan : {{surah.revelation.id}}</p></li>
             <div class="surah inline">
               <button @click="$router.push({name: 'surah-id', params:{id:surah.number},})"
-                class="bg-blue-500 text-white shadow-md hover:shadow-none rounded-md font-normal py-2 px-4 rounded-md"
+                class="btn-click bg-blue-500 text-white shadow-sm hover:shadow-none rounded-md font-normal py-2 px-4 rounded-md"
               >
                 Baca surah
               </button>
             </div>
             <div class="dropdown inline">
-              <button @click="clickShow(surah.number)" class="bg-gray-300 shadow-md hover:shadow-none rounded-md text-gray-700 font-semibold py-2 px-4 rounded inline-flex items-center">
+              <button @click="clickShow(surah.number)" class="bg-gray-200 shadow-sm hover:shadow-none rounded-md text-gray-700 font-normal py-2 px-4 rounded inline-flex items-center">
                 <span class="mr-1">Tafsir</span>
-                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/> </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
               </button>
               <ul v-show="showTafsir[surah.number]" class="pb-3 text-gray-700 pt-1">
-                <li><a class="rounded-md bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap">{{surah.tafsir.id}}</a></li>
+                <li><a class="rounded-md bg-gray-300 text-gray-700 py-2 px-4 block whitespace-no-wrap">{{surah.tafsir.id}}</a></li>
               </ul>
             </div>
           </ul>
