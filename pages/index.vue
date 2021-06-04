@@ -10,7 +10,7 @@
         type="search"
         placeholder="Cari surah yang ingin dibaca"
         @keyup="getSurah"
-        class="mt-8 py-4 px-3 w-11/12 m-3 truncate leading-5 font-medium placeholder-gray-500 border-transparent text-gray-700 focus:outline-none focus:ring-2 focus:ring-green-600 rounded-lg shadow-md focus:outline-none focus:bg-white bg-gray-100"
+        class="mt-8 py-4 px-3 w-11/12 m-3 truncate leading-5 font-medium placeholder-gray-500 border-transparent text-gray-700 focus:outline-none focus:ring-2 focus:ring-green-600 rounded-md shadow-md focus:outline-none focus:bg-white bg-gray-100"
       />
         <p class="text-left m-4 font-medium">List Surah :</p>
         <div v-for="surah in surah" :key="surah.number" class="h-auto text-left w-auto py-6 px-4 m-4 rounded-xl hover:shadow-lg text-black border">
