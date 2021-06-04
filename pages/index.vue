@@ -5,20 +5,29 @@
       <h3 class="bg-gray-800 py-9 px-4 rounded-md m-4 text-white font-semibold shadow-md">Aplikasi Qur'an terjemahan Bahasa Indonesia lengkap dengan Tafsir</h3>
       <br>
       <hr>
+      <input 
+        v-model="searchSurah"
+        type="search"
+        placeholder="Cari surah yang ingin dibaca"
+        @keyup="getSurah"
+        class="mt-8 py-4 px-3 w-11/12 m-3 truncate leading-5 font-medium placeholder-gray-500 border-transparent text-gray-700 focus:outline-none focus:ring-2 focus:ring-green-600 rounded-lg shadow-md focus:outline-none focus:bg-white bg-gray-100"
+      />
         <p class="text-left m-4 font-medium">List Surah :</p>
-        <div v-for="surah in surah.data" :key="surah.number" class="h-auto text-left w-auto py-6 px-4 m-4 rounded-lg hover:shadow-lg text-black border">
+        <div v-for="surah in surah" :key="surah.number" class="h-auto text-left w-auto py-6 px-4 m-4 rounded-xl hover:shadow-lg text-black border">
+          <div class="object-right-top py-1 pr-4 pl-2 w-10 mb-5 rounded-md bg-gray-500 text-white font-medium text-right">{{surah.number}}</div>
           <ul>
-            <li><p>Nama Surah : {{surah.name.transliteration.id}}</p></li>
-            <li><p>Diturunkan : {{surah.revelation.id}}</p></li>
+            <li><p class="text-4xl">{{surah.name.short}}</p></li>
+            <li><p class="text-lg">{{surah.name.transliteration.id}} - {{surah.revelation.id}}</p></li>
+            <li><p class="text-lg"><i>({{surah.name.translation.id}} : {{surah.numberOfVerses}} ayat)</i></p></li>
             <div class="surah inline">
               <button @click="$router.push({name: 'surah-id', params:{id:surah.number},})"
-                class="btn-click bg-blue-500 text-white shadow-sm hover:shadow-none rounded-md font-normal py-2 px-4 rounded-md"
+                class="mt-3 btn-click focus:outline-none bg-blue-500 text-white shadow-sm hover:shadow-none rounded-md font-normal py-2 px-4 rounded-md"
               >
                 Baca surah
               </button>
             </div>
             <div class="dropdown inline">
-              <button @click="clickShow(surah.number)" class="bg-gray-200 shadow-sm hover:shadow-none rounded-md text-gray-700 font-normal py-2 px-4 rounded inline-flex items-center">
+              <button @click="clickShow(surah.number)" class="bg-gray-200 focus:outline-none shadow-sm hover:shadow-none rounded-md text-gray-700 font-normal py-2 px-4 rounded inline-flex items-center">
                 <span class="mr-1">Tafsir</span>
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
                   <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
@@ -37,16 +46,31 @@
 
 <script>
 export default {
-  async asyncData({ $axios }) {
-    const surah = await $axios.$get('/surah')
-    return { surah }
-  },
+  // async asyncData({ $axios }) {
+  //   const surah = await $axios.$get('/surah')
+  //   return { surah }
+  // },
   data() {
     return {
-      showTafsir: {}
+      showTafsir: {},
+      surah: [],
+      searchSurah: ''
     }
   },
   methods: {
+    getSurah() {
+      fetch("https://api.quran.sutanlab.id/surah")
+        .then(response => response.json())
+        .then(res => {
+          if(this.searchSurah) {
+            this.surah = res.data.filter(surah => 
+              surah.name.transliteration.id.toLowerCase().includes(this.searchSurah.toLowerCase())
+            );
+          } else {
+              this.surah = res.data;
+          }
+        });
+    },
     clickShow(id) {
       console.log('before', this.showTafsir)
       if(this.showTafsir[id]) {
@@ -64,6 +88,9 @@ export default {
       }
       console.log('after', this.showTafsir)
     }
+  },
+  created() {
+    this.getSurah()
   }
 }
 </script>
@@ -112,6 +139,11 @@ export default {
 
 .links {
   padding-top: 15px;
+}
+
+.arabic {
+  font-size: 25px;
+  font-family:'Times New Roman', Times, serif
 }
 
 </style>
