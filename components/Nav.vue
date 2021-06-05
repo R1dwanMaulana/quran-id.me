@@ -1,22 +1,23 @@
 <template>
-    <nav class="fixed bottom-0 inset-x-0 bg-green-500 text-white text-xs uppercase font-serif flex jestify-between">
-        <nuxt-link to="/" class="w-full block py-2 px-3 text-center hover:bg-green-600 transition duration-300">
-            <svg class="w-6 h-5 mb-2 mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+    <nav class="fixed bottom-0 inset-x-0 bg-green-600 text-white text-xs uppercase font-serif flex jestify-between">
+        <nuxt-link to="/" class="w-full block py-2 px-3 text-center hover:bg-green-700 transition duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-6 mb-1 mx-auto" viewBox="0 0 20 20" fill="currentColor">
+  <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
 </svg>
-            Home
+            Surat
         </nuxt-link>
-        <nuxt-link to="/ayat" class="w-full block py-2 px-3 text-center hover:bg-green-600 transition duration-300">
-            <svg class="w-6 h-5 mb-2 mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+        <nuxt-link to="/dailydoa" class="w-full block py-2 px-3 text-center hover:bg-green-700 transition duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-6 mb-1 mx-auto" viewBox="0 0 20 20" fill="currentColor">
+  <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
+  <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd" />
 </svg>
-            Ayat
+            Doa Harian
         </nuxt-link>
-        <a href="https://riddev.tech" target="_blank" class="w-full block py-2 px-3 text-center hover:bg-green-600 transition duration-300">
-            <svg class="w-6 h-5 mb-2 mx-auto" xmlns="http://www.w3.org/2000/svg"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+        <a href="https://riddev.tech" target="_blank" class="w-full block py-2 px-3 text-center hover:bg-green-700 transition duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-6 mb-1 mx-auto" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
 </svg>
-            About
+            Tentang
         </a>
     </nav>
 </template>
