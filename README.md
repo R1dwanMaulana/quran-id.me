@@ -1,6 +1,6 @@
 # quran-ID
 
-## Build Setup
+📖 Aplikasi Quran praktis dari Web Browser 
 
 ```bash
 # install dependencies
