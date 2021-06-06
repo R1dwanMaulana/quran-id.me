@@ -1,0 +1,60 @@
+<template>
+    <div class="container-about">
+        <Nav />
+        <div class="m-3">
+            <img src="/icon.png" alt="logo" class="mx-auto h-12 w-12 mb-3">
+            <p class="text-2xl font-semibold text-center mb-10">Membaca Al-Qur'an dimanapun berada, praktis dari web browser + support install(app native)</p>
+            
+            <p>Sumber data :</p>
+            <div class="text-justify">
+            <ul>
+                <li>
+                    - <span class="text-green-600">
+                        <a href="https://github.com/sutanlab/quran-api" target="_blank">Quran API
+                        </a>
+                    </span> 
+                    dari Sutanlab untuk sumber data Al Qur'an.
+                </li>  
+            </ul>
+            <ul>
+                <li>
+                    - <span class="text-green-600">
+                        <a href="https://github.com/Zhirrr/islamic-rest-api-indonesian-v2" target="_blank">Islamic Rest API Indonesia V2
+                        </a>
+                    </span> dari Zhirrr untuk sumber data Do'a Harian.
+                </li>  
+            </ul>
+            </div>
+
+            <div class="mt-10 bg-yellow-100 border-t-4 border-yellow-400 rounded-md px-4 py-3 shadow-md" role="alert">
+            <div class="flex">
+                <div class="py-1"><svg class="fill-current h-6 w-6 text-teal-500 mr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z"/></svg></div>
+                <div>
+                <p class="font-bold">Attention</p>
+                <p class="text-sm">Apabila Anda ingin menyampaikan saran, kritik, dan menemukan kesalahan pada aplikasi. bisa dijelaskan di <span class="text-yellow-600"><a href="https://github.com/R1dwanMaulana/quran-id/issues/new" target="_blank">halaman Github issue</a></span></p>
+                </div>
+            </div>
+            </div>
+            <!-- <div class="bg-yellow-200 border-l-4 border-yellow-500 text-orange-700 p-4" role="alert"> -->
+                <!-- <p class="text-center mt-10">Apabila Anda ingin menyampaikan saran, kritik, dan menemukan kesalahan pada aplikasi. bisa dijelaskan di <span class="text-green-600"><a href="https://github.com/R1dwanMaulana/quran-id/issues/new" target="_blank">halaman Github issue</a></span></p> -->
+            <!-- </div> -->
+
+            <p class="font-light mt-20 text-sm">Contents licensed under <span class="text-green-600"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.id" target="_blank">CC BY-NC-SA 4.0.</a></span></p>
+            <p class="font-light text-sm">made using <span class="text-green-600"><a href="https://nuxtjs.org/" target="_blank">Nuxt.js</a></span> and  <span class="text-green-600"><a href="https://tailwindcss.com/" target="_blank">Tailwind CSS.</a></span> Hosted on <span class="text-green-600"><a href="https://vercel.com" target="_blank">Vercel.</a></span></p>
+            <p class="font-light mt-3 text-sm">MIT License © 2021 - present | <span class="text-green-600"><a href="https://riddev.tech" target="_blank">Ridwan Maulana.</a></span></p>
+        </div>
+    </div>
+</template>
+
+<style scoped>
+.container-about {
+    max-width: 500px;
+    margin: 0 auto;
+    padding-bottom: 100px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+</style>
