@@ -20,11 +20,14 @@ $ yarn generate
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
 
 ## credit
-Quran from [quran-api](https://github.com/sutanlab/quran-api) by [@sutanlab](https://github.com/sutanlab)
-Daily Do'a from [islamic rest api indonesia v2](https://github.com/Zhirrr/islamic-rest-api-indonesian-v2) by [@zhirrr](https://github.com/Zhirrr)
 
-## icon
-Icons made by [heroicons](https://heroicons.com/)
+-   Quran from [quran-api](https://github.com/sutanlab/quran-api) by [@sutanlab](https://github.com/sutanlab)
+-   Daily Do'a from [islamic rest api indonesia v2](https://github.com/Zhirrr/islamic-rest-api-indonesian-v2) by [@zhirrr](https://github.com/Zhirrr)
 
+## icons
+
+-   Icons made by [heroicons](https://heroicons.com/)
+
+* * *
 
 Copyright © 2021 by Ridwan Maulana
