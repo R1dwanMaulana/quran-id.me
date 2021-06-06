@@ -21,10 +21,10 @@
                 
                     <!-- <div class="dropdown"> -->
                         <ul v-show="showDoa[dailydoa.title]" class="pb-3 text-gray-700 pt-1">
-                            <li><p class="rounded-md bg-white text-gray-700 py-3 px-4 block whitespace-no-wrap text-right text-3xl leading-normal">{{dailydoa.arabic}}</p>
+                            <li><p class="arabic-daily rounded-md bg-white text-gray-700 py-3 px-4 block whitespace-no-wrap text-right text-3xl leading-normal">{{dailydoa.arabic}}</p>
                             <p class="text-md mb-3 mt-2">{{dailydoa.latin}}</p>
                             </li>
-                            <li class="text-left text-lg whitespace-no-wrap">Artinya : <i>{{dailydoa.translation}}</i></li>
+                            <li class="text-left text-lg whitespace-no-wrap bg-gray-200 pr-3 pl-3 py-2 rounded-md">Artinya : <i>{{dailydoa.translation}}</i></li>
                         </ul>
                     <!-- </div> -->
             </div>
@@ -75,3 +75,9 @@ export default {
 }
 
 </script>
+
+<style scoped>
+.arabic-daily {
+    font-family:'Times New Roman', Times, serif
+}
+</style>
