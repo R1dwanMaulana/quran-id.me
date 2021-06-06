@@ -21,7 +21,7 @@
                 
                     <!-- <div class="dropdown"> -->
                         <ul v-show="showDoa[dailydoa.title]" class="pb-3 text-gray-700 pt-1">
-                            <li><p class="rounded-md bg-white text-gray-700 py-3 px-4 block whitespace-no-wrap text-right text-4xl">{{dailydoa.arabic}}</p>
+                            <li><p class="rounded-md bg-white text-gray-700 py-3 px-4 block whitespace-no-wrap text-right text-3xl leading-normal">{{dailydoa.arabic}}</p>
                             <p class="text-md mb-3 mt-2">{{dailydoa.latin}}</p>
                             </li>
                             <li class="text-left text-lg whitespace-no-wrap">Artinya : <i>{{dailydoa.translation}}</i></li>
