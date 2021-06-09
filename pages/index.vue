@@ -10,15 +10,15 @@
         type="search"
         placeholder="Cari surah yang ingin dibaca"
         @keyup="getSurah"
-        class="mt-8 py-4 px-3 w-11/12 m-3 truncate leading-5 font-medium placeholder-gray-500 border-transparent text-gray-700 focus:outline-none focus:ring-2 focus:ring-green-600 rounded-md shadow-md focus:outline-none focus:bg-white bg-gray-100"
+        class="mt-8 py-4 px-3 w-11/12 m-3 truncate leading-5 font-medium placeholder-gray-500 border-transparent text-gray-700 focus:outline-none focus:ring-4 focus:ring-blue-600 rounded-md shadow-md focus:outline-none focus:bg-white bg-gray-100"
       />
-        <p class="text-left m-4 font-medium">List Surah :</p>
-        <div v-for="surah in surah" :key="surah.number" class="h-auto text-left w-auto py-6 px-4 m-4 rounded-xl hover:shadow-lg text-black border">
+        <p class="text-left m-4 font-medium text-white">List Surah :</p>
+        <div v-for="surah in surah" :key="surah.number" class="h-auto text-left w-auto py-6 px-4 m-4 rounded-xl bg-gray-900">
           <div class="object-right-top py-1 pr-4 pl-2 w-10 mb-5 rounded-md bg-gray-500 text-white font-medium text-right">{{surah.number}}</div>
           <ul>
-            <li><p class="text-4xl">{{surah.name.short}}</p></li>
-            <li><p class="text-lg">{{surah.name.transliteration.id}} - {{surah.revelation.id}}</p></li>
-            <li><p class="text-lg"><i>({{surah.name.translation.id}} : {{surah.numberOfVerses}} ayat)</i></p></li>
+            <li><p class="text-4xl text-white">{{surah.name.short}}</p></li>
+            <li><p class="text-lg text-white">{{surah.name.transliteration.id}} - {{surah.revelation.id}}</p></li>
+            <li><p class="text-lg text-white"><i>({{surah.name.translation.id}} : {{surah.numberOfVerses}} ayat)</i></p></li>
             <div class="surah inline">
               <button @click="$router.push({name: 'surah-id', params:{id:surah.number},})"
                 class="mt-3 btn-click focus:outline-none bg-blue-500 text-white shadow-sm hover:shadow-none rounded-md font-normal py-2 px-4 rounded-md"
@@ -34,7 +34,7 @@
                 </svg>
               </button>
               <ul v-show="showTafsir[surah.number]" class="pb-3 text-gray-700 pt-1">
-                <li><a class="rounded-md bg-gray-300 text-gray-700 py-2 px-4 block whitespace-no-wrap">{{surah.tafsir.id}}</a></li>
+                <li><a class="rounded-md bg-gray-800 text-white py-2 px-4 block whitespace-no-wrap">{{surah.tafsir.id}}</a></li>
               </ul>
             </div>
           </ul>

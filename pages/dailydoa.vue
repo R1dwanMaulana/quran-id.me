@@ -10,21 +10,21 @@
                 type="search"
                 placeholder="Cari doa hari ini"
                 @keyup="getDoa"
-                class="mt-8 py-4 px-3 w-11/12 m-3 truncate leading-5 font-medium placeholder-gray-500 border-transparent text-gray-700 focus:outline-none focus:ring-2 focus:ring-green-600 rounded-md shadow-md focus:outline-none focus:bg-white bg-gray-100"
+                class="mt-8 py-4 px-3 w-11/12 m-3 truncate leading-5 font-medium placeholder-gray-500 border-transparent text-gray-700 focus:outline-none focus:ring-4 focus:ring-blue-600 rounded-md shadow-md focus:outline-none focus:bg-white bg-gray-100"
             />
-            <p class="text-left m-4 font-medium">List Doa Harian :</p>
-            <div v-for="dailydoa in doaharian" :key="dailydoa.data" class="h-auto text-left w-11/12 py-5 px-4 m-4 rounded-xl hover:shadow-lg text-black border">
+            <p class="text-left m-4 font-medium text-white">List Doa Harian :</p>
+            <div v-for="dailydoa in doaharian" :key="dailydoa.data" class="h-auto text-left w-11/12 py-5 px-4 m-4 rounded-xl hover:shadow-lg bg-gray-900">
                 
-                    <p @click="clickShow(dailydoa.title)" class="text-lg">{{dailydoa.title}} <svg xmlns="http://www.w3.org/2000/svg" class="inline h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                    <p @click="clickShow(dailydoa.title)" class="text-lg text-white">{{dailydoa.title}} <svg xmlns="http://www.w3.org/2000/svg" class="inline h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
                     </svg></p>
                 
                     <!-- <div class="dropdown"> -->
                         <ul v-show="showDoa[dailydoa.title]" class="pb-3 text-gray-700 pt-1">
-                            <li><p class="arabic-daily rounded-md bg-white text-gray-700 py-3 px-4 block whitespace-no-wrap text-right text-3xl leading-normal">{{dailydoa.arabic}}</p>
-                            <p class="text-md mb-3 mt-2">{{dailydoa.latin}}</p>
+                            <li><p class="arabic-daily rounded-md text-white py-3 px-4 block whitespace-no-wrap text-right text-3xl leading-normal">{{dailydoa.arabic}}</p>
+                            <p class="text-md mb-2 mt-2 pr-3 pl-3 text-yellow-600">{{dailydoa.latin}}</p>
                             </li>
-                            <li class="text-left text-lg whitespace-no-wrap bg-gray-200 pr-3 pl-3 py-2 rounded-md">Artinya : <i>{{dailydoa.translation}}</i></li>
+                            <li class="text-left text-lg whitespace-no-wrap text-white pr-3 pl-3 py-2 rounded-md">Artinya : <i>{{dailydoa.translation}}</i></li>
                         </ul>
                     <!-- </div> -->
             </div>

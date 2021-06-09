@@ -3,12 +3,12 @@
         <Nav />
         <div class="m-3">
             <img src="/icon.png" alt="logo" class="mx-auto h-12 w-12 mb-3">
-            <p class="text-2xl font-semibold text-center mb-10">Membaca Al-Qur'an dimanapun berada, praktis dari web browser + support install(app native)</p>
+            <p class="text-2xl font-semibold text-center mb-10 text-white">Membaca Al-Qur'an dimanapun berada, praktis dari web browser + support install(app native)</p>
             
             <p>Sumber data :</p>
             <div class="text-justify">
             <ul>
-                <li>
+                <li class="text-white">
                     - <span class="text-green-600">
                         <a href="https://github.com/sutanlab/quran-api" target="_blank">Quran API
                         </a>
@@ -17,7 +17,7 @@
                 </li>  
             </ul>
             <ul>
-                <li>
+                <li class="text-white">
                     - <span class="text-green-600">
                         <a href="https://github.com/Zhirrr/islamic-rest-api-indonesian-v2" target="_blank">Islamic Rest API Indonesia V2
                         </a>
@@ -39,9 +39,9 @@
                 <!-- <p class="text-center mt-10">Apabila Anda ingin menyampaikan saran, kritik, dan menemukan kesalahan pada aplikasi. bisa dijelaskan di <span class="text-green-600"><a href="https://github.com/R1dwanMaulana/quran-id/issues/new" target="_blank">halaman Github issue</a></span></p> -->
             <!-- </div> -->
 
-            <p class="font-light mt-20 text-sm">Contents licensed under <span class="text-green-600"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.id" target="_blank">CC BY-NC-SA 4.0.</a></span></p>
-            <p class="font-light text-sm">Made using <span class="text-green-600"><a href="https://nuxtjs.org/" target="_blank">Nuxt.js</a></span> and  <span class="text-green-600"><a href="https://tailwindcss.com/" target="_blank">Tailwind CSS.</a></span> Hosted on <span class="text-green-600"><a href="https://vercel.com" target="_blank">Vercel.</a></span></p>
-            <p class="font-light mt-3 text-sm">MIT License © 2021 - present | <span class="text-green-600"><a href="https://riddev.tech" target="_blank">Ridwan Maulana.</a></span></p>
+            <p class="font-light mt-20 text-sm text-white">Contents licensed under <span class="text-green-600"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.id" target="_blank">CC BY-NC-SA 4.0.</a></span></p>
+            <p class="font-light text-sm text-white">Made using <span class="text-green-600"><a href="https://nuxtjs.org/" target="_blank">Nuxt.js</a></span> and  <span class="text-green-600"><a href="https://tailwindcss.com/" target="_blank">Tailwind CSS.</a></span> Hosted on <span class="text-green-600"><a href="https://vercel.com" target="_blank">Vercel.</a></span></p>
+            <p class="font-light mt-3 text-sm text-white">MIT License © 2021 - present | <span class="text-green-600"><a href="https://riddev.tech" target="_blank">Ridwan Maulana.</a></span></p>
         </div>
     </div>
 </template>
