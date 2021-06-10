@@ -10,10 +10,10 @@
         type="search"
         placeholder="Cari surah yang ingin dibaca"
         @keyup="getSurah"
-        class="mt-8 py-4 px-3 w-11/12 m-3 truncate leading-5 font-medium placeholder-gray-500 border-transparent text-gray-700 focus:outline-none focus:ring-4 focus:ring-blue-600 rounded-md shadow-md focus:outline-none focus:bg-white bg-gray-100"
+        class="mt-8 py-3 px-3 w-11/12 m-3 truncate leading-5 font-medium placeholder-gray-400 border-transparent text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-700 border border-gray-600 focus:border-blue-500 rounded-md focus:outline-none bg-gray-800"
       />
         <p class="text-left m-4 font-medium text-white">List Surah :</p>
-        <div v-for="surah in surah" :key="surah.number" class="h-auto text-left w-auto py-6 px-4 m-4 rounded-xl bg-gray-900">
+        <div v-for="surah in surah" :key="surah.number" class="bg-primary h-auto text-left w-auto py-6 px-4 m-4 rounded-xl border border-gray-600">
           <div class="object-right-top py-1 pr-4 pl-2 w-10 mb-5 rounded-md bg-gray-500 text-white font-medium text-right">{{surah.number}}</div>
           <ul>
             <li><p class="text-4xl text-white">{{surah.name.short}}</p></li>
@@ -144,6 +144,10 @@ export default {
 .arabic {
   font-size: 25px;
   font-family:'Times New Roman', Times, serif
+}
+
+.bg-primary {
+  background-color: #1a2025;
 }
 
 </style>
