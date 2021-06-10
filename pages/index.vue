@@ -16,9 +16,9 @@
         <div v-for="surah in surah" :key="surah.number" class="bg-primary h-auto text-left w-auto py-6 px-4 m-4 rounded-xl border border-gray-600">
           <div class="object-right-top py-1 pr-4 pl-2 w-10 mb-5 rounded-md bg-gray-500 text-white font-medium text-right">{{surah.number}}</div>
           <ul>
-            <li><p class="text-4xl text-white">{{surah.name.short}}</p></li>
+            <li><p class="text-3xl text-white">{{surah.name.short}}</p></li>
             <li><p class="text-lg text-white">{{surah.name.transliteration.id}} - {{surah.revelation.id}}</p></li>
-            <li><p class="text-lg text-white"><i>({{surah.name.translation.id}} : {{surah.numberOfVerses}} ayat)</i></p></li>
+            <li><p class="text-md text-yellow-600"><i>({{surah.name.translation.id}} : {{surah.numberOfVerses}} ayat)</i></p></li>
             <div class="surah inline">
               <button @click="$router.push({name: 'surah-id', params:{id:surah.number},})"
                 class="mt-3 btn-click focus:outline-none bg-blue-500 text-white shadow-sm hover:shadow-none rounded-md font-normal py-2 px-4 rounded-md"
@@ -142,7 +142,7 @@ export default {
 }
 
 .arabic {
-  font-size: 25px;
+  /* font-size: 25px; */
   font-family:'Times New Roman', Times, serif
 }
 
