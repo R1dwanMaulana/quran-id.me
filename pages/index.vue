@@ -142,7 +142,6 @@ export default {
 }
 
 .arabic {
-  /* font-size: 25px; */
   font-family:'Times New Roman', Times, serif
 }
 
