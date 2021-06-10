@@ -10,10 +10,10 @@
                 type="search"
                 placeholder="Cari doa hari ini"
                 @keyup="getDoa"
-                class="mt-8 py-4 px-3 w-11/12 m-3 truncate leading-5 font-medium placeholder-gray-500 border-transparent text-gray-700 focus:outline-none focus:ring-4 focus:ring-blue-600 rounded-md shadow-md focus:outline-none focus:bg-white bg-gray-100"
+                class="mt-8 py-3 px-3 w-11/12 m-3 truncate leading-5 font-medium placeholder-gray-400 border-transparent text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-700 border border-gray-600 focus:border-blue-500 rounded-md focus:outline-none bg-gray-800"
             />
             <p class="text-left m-4 font-medium text-white">List Doa Harian :</p>
-            <div v-for="dailydoa in doaharian" :key="dailydoa.data" class="h-auto text-left w-11/12 py-5 px-4 m-4 rounded-xl hover:shadow-lg bg-gray-900">
+            <div v-for="dailydoa in doaharian" :key="dailydoa.data" class="bg-primary h-auto text-left w-11/12 py-5 px-4 m-4 rounded-xl border border-gray-600">
                 
                     <p @click="clickShow(dailydoa.title)" class="text-lg text-white">{{dailydoa.title}} <svg xmlns="http://www.w3.org/2000/svg" class="inline h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
