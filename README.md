@@ -1,6 +1,6 @@
-# quran-ID
+# quran-id
 
-📖 Aplikasi Quran praktis dari Web Browser 
+📖 Aplikasi Al-Qur'an praktis dari Web Browser + support install(app native)
 
 ```bash
 # install dependencies
