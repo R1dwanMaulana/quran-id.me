@@ -10,7 +10,7 @@
                 type="search"
                 placeholder="Cari doa hari ini"
                 @keyup="getDoa"
-                class="mt-8 py-3 px-3 w-11/12 m-3 truncate leading-5 font-medium placeholder-gray-400 border-transparent text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-700 border border-gray-600 focus:border-blue-500 rounded-md focus:outline-none bg-gray-800"
+                class="mt-8 py-3 px-3 w-11/12 m-3 truncate leading-5 font-medium placeholder-gray-400 border-transparent text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-700 border border-gray-600 focus:border-blue-500 rounded-md focus:outline-none bg-gray-800"
             />
             <p class="text-left m-4 font-medium text-white">List Doa Harian :</p>
             <div v-for="dailydoa in doaharian" :key="dailydoa.data" class="bg-primary h-auto text-left w-11/12 py-5 px-4 m-4 rounded-xl border border-gray-600">
@@ -78,6 +78,7 @@ export default {
 
 <style scoped>
 .arabic-daily {
+    font-size: 37px;
     font-family:'Times New Roman', Times, serif
 }
 </style>
