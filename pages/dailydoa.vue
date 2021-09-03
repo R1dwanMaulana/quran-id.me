@@ -15,7 +15,7 @@
             <p class="text-left m-4 font-medium text-white">List Doa Harian :</p>
             <div v-for="dailydoa in doaharian" :key="dailydoa.data" class="bg-primary h-auto text-left w-11/12 py-5 px-4 m-4 rounded-xl border border-gray-600">
                 
-                    <p @click="clickShow(dailydoa.title)" class="text-lg text-white">{{dailydoa.title}} <svg xmlns="http://www.w3.org/2000/svg" class="inline h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                    <p @click="clickShow(dailydoa.title)" class="text-lg items-center text-white inset-x-0 flex justify-between">{{dailydoa.title}} <svg xmlns="http://www.w3.org/2000/svg" class="inline h-4 w-4 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
                     </svg></p>
                 
