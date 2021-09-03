@@ -2,6 +2,9 @@
 
 📖 Aplikasi Al-Qur'an praktis dari Web Browser + support install(app native)
 
+## Preview
+<img src="/static/mobile.png" width="200px">
+
 ```bash
 # install dependencies
 $ yarn install
