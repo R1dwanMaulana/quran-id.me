@@ -2,6 +2,7 @@
   <div class="container">
     <HeaderNav />
       <div class="pt-16">
+        <!-- <div v-for="verse in surah.data.verses" :key="verse.text.arab"> -->
         <div v-for="verse in surah.data.verses" :key="verse.text.arab" class="bg-gray-900 border border-transparent py-5 px-4 rounded-xl m-4 text-right">
           <div class="object-left-top py-1 pr-4 pl-2 w-10 rounded-md bg-gray-700 text-white font-medium">{{verse.number.inSurah}}</div>
           <h3 class="arabic pt-2 pb-3 text-white leading-relaxed">{{verse.text.arab}}</h3>
