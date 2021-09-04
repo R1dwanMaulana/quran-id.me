@@ -1,5 +1,11 @@
 module.exports = {
-        theme: {},
+        theme: {
+          extend: {
+            fontFamily: {
+              rubik: "'Rubik', sans-serif",
+            }
+          },
+        },
         variants: {},
         plugins: [],
         purge: {
