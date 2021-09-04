@@ -29,7 +29,7 @@
                     - <span class="text-green-600">
                         <a href="https://quran.kemenag.go.id/" target="_blank">Quran Kemenag
                         </a>
-                    </span> dari Kemenag RI.
+                    </span> dari Kemenag RI untuk sumber data tafsir surah.
                 </li>  
             </ul>
             </div>

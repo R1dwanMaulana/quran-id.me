@@ -1,12 +1,12 @@
 <template>
-  <div>
+  <div class="font-rubik">
     <Nuxt />
   </div>
 </template>
 
 <style>
 html {
-  font-family:
+  /* font-family:
     'Source Sans Pro',
     -apple-system,
     BlinkMacSystemFont,
@@ -14,7 +14,7 @@ html {
     Roboto,
     'Helvetica Neue',
     Arial,
-    sans-serif;
+    sans-serif; */
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
