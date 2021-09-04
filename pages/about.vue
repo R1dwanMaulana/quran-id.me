@@ -24,6 +24,14 @@
                     </span> dari Zhirrr untuk sumber data Do'a Harian.
                 </li>  
             </ul>
+            <ul>
+                <li class="text-white">
+                    - <span class="text-green-600">
+                        <a href="https://quran.kemenag.go.id/" target="_blank">Quran Kemenag
+                        </a>
+                    </span> dari Kemenag RI.
+                </li>  
+            </ul>
             </div>
 
             <div class="mt-10 bg-yellow-100 border-t-4 border-yellow-400 rounded-lg px-4 py-3 shadow-md" role="alert">
