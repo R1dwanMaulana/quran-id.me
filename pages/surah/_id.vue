@@ -24,6 +24,9 @@
                 </svg> -->
                 <img src="/arrow-down.svg" alt="">
               </div>
+              <!-- audio -->
+                <audio :src="verse.audio.primary" controls="" v-on:play="state = 'Bermain'" v-on:pause="state = 'Berhenti Sejenak'" v-on:ended="state = 'Berhenti'">
+                </audio>
               <ul v-show="showTranslate[verse.text.arab]" class="pb-3 text-gray-700 pt-1">
                 <li><a class="bg-transparent text-white py-2 block whitespace-no-wrap">{{verse.translation.id}}</a></li>
               </ul>
@@ -44,7 +47,8 @@ export default {
   data() {
     return {
       showTranslate: {},
-      showTafsir: {}
+      showTafsir: {},
+      state: 'Berhenti'
     }
   },
   async asyncData({$axios, params}) {
