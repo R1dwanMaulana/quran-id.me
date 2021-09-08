@@ -51,6 +51,7 @@ export default {
   //   const surah = await $axios.$get('/surah')
   //   return { surah }
   // },
+  
   head: {
       title: 'Quran-id | Aplikasi Baca Al-Quran praktis dari browser | quran-id.vercel.app',
       meta: [
