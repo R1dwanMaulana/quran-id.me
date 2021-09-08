@@ -6,7 +6,6 @@
         <div v-for="verse in surah.data.verses" :key="verse" class="bg-gray-900 border border-transparent py-5 px-4 rounded-xl m-4 text-right">
           <div class="object-left-top py-1 pr-4 pl-2 w-10 rounded-md bg-gray-700 text-white font-medium">{{verse.number.inSurah}}</div>
           <h3 class="pt-2 pb-3 text-white leading-loose font-arabic text-3xl tracking-wide">{{verse.text.arab}}</h3>
-          <h3 class="text-left text-yellow-600">{{verse.text.transliteration.en}}</h3>
 
           <div class="text-left">
               <div @click="clickShowTafsir(verse.tafsir)" class="cursor-pointer focus:outline-none font-normal inline-flex items-center py-2">
