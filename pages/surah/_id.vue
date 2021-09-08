@@ -28,7 +28,7 @@
                 <li><a class="bg-transparent text-white py-2 block whitespace-no-wrap">{{verse.translation.id}}</a></li>
               </ul>
               <ul v-show="showTafsir[verse.tafsir]" class="pb-3 text-gray-700 pt-1">
-                <li class="text-white font-semibold">Tafsir dari kemenang:</li>
+                <li class="text-white font-semibold">Tafsir dari kemenag:</li>
                 <li><a class="bg-transparent text-white py-2 block whitespace-no-wrap">{{verse.tafsir.id.long}}</a></li>
               </ul>
           </div>
