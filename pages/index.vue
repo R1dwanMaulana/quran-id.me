@@ -29,9 +29,10 @@
             <div class="dropdown inline">
               <button @click="clickShow(surah.number)" class="bg-gray-200 focus:outline-none shadow-sm hover:shadow-none rounded-md text-gray-700 font-normal py-2 px-4 rounded inline-flex items-center">
                 <span class="mr-1">Muqaddimah</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
                   <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                </svg>
+                </svg> -->
+                <img :src="toogleIcon" @click="icon = !icon" alt="">
               </button>
               <ul v-show="showTafsir[surah.number]" class="pb-3 text-gray-700 pt-1">
                 <li><a class="rounded-md bg-gray-800 text-white py-2 px-4 block whitespace-no-wrap">{{surah.tafsir.id}}</a></li>
@@ -54,7 +55,8 @@ export default {
     return {
       showTafsir: {},
       surah: [],
-      searchSurah: ''
+      searchSurah: '',
+      icon: false
     }
   },
   methods: {
@@ -91,6 +93,15 @@ export default {
   },
   created() {
     this.getSurah()
+  },
+  computed: {
+    toogleIcon() {
+      if(this.icon) {
+        return require('/static/arrow-up-black.svg')
+      } else {
+        return require('/static/arrow-down-black.svg')
+      }
+    },
   }
 }
 </script>
