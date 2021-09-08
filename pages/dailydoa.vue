@@ -34,6 +34,18 @@
 
 <script>
 export default {
+    head: {
+        title: 'Doa Harian - Quran-id | Aplikasi Baca Al-Quran praktis dari browser',
+        meta: [
+            { hid: "description", name: "description", content: "Kumpulan doa harian dilengkapi dengan arti." },
+            { name: "format-detection", content: "telephone=no" },
+	        { name: "author", content: "Quran-id"},
+            { name: "description", content: "Kumpulan doa harian dilengkapi dengan arti." },
+            { property: "og:title", content: "Doa Harian - Quran-id | Aplikasi Baca Al-Quran praktis dari browser" },
+            { property: "og:description", content: "Kumpulan doa harian dilengkapi dengan arti." },
+            { property: "og:image", content: "/icon.png"},
+        ],
+    },
     data() {
         return {
             showDoa: {},

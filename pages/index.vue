@@ -51,6 +51,23 @@ export default {
   //   const surah = await $axios.$get('/surah')
   //   return { surah }
   // },
+  head: {
+      title: 'Quran-id | Aplikasi Baca Al-Quran praktis dari browser | quran-id.vercel.app',
+      meta: [
+          { charset: 'utf-8' },
+          { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+          { hid: 'description', name: 'description', content: '' },
+          { name: "format-detection", content: "telephone=no" },
+          { name: "author", content: "Quran-id"},
+          { name: "description", content: "Quran-id adalah aplikasi baca al-quran dari web browser lengkap dengan tafsir."},
+          { property: "og:title", content: "Quran-id | Aplikasi Baca Al-Quran praktis dari browser"},
+          { property: "og:description", content: "Quran-id adalah aplikasi baca al-quran dari web browser lengkap dengan tafsir."},
+          { property: "og:image", content: "/icon.png"},
+          { property: "og:site_name", content: "Quran-id"},
+          { property: "og:type", content: "website"},
+          { property: "og:url", content: "https://quran-id.vercel.app/"}
+      ],
+    },
   data() {
     return {
       showMuqaddimah: {},

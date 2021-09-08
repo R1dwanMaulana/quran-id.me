@@ -51,6 +51,23 @@
     </div>
 </template>
 
+<script>
+export default {
+    head: {
+        title: 'Tentang - Quran-id | Aplikasi Baca Al-Quran praktis dari browser',
+        meta: [
+            { hid: "description", name: "description", content: "Dimulai dengan misi untuk mempermudah dalam membaca Qur'an dimanapun berada." },
+            { name: "format-detection", content: "telephone=no" },
+	        { name: "author", content: "Quran-id"},
+            { name: "description", content: "Dimulai dengan misi untuk mempermudah dalam membaca qur'an dan memahami isi tafsir." },
+            { property: "og:title", content: "Tentang - Quran-id | Aplikasi Baca Al-Quran praktis dari browser" },
+            { property: "og:description", content: "Dimulai dengan misi untuk mempermudah dalam membaca qur'an dan memahami isi tafsir." },
+            { property: "og:image", content: "/icon.png"},
+        ],
+    },
+}
+</script>
+
 <style scoped>
 .container-about {
     max-width: 500px;
