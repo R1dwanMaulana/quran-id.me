@@ -16,7 +16,7 @@
         <div v-for="surah in surah" :key="surah.number" class="bg-primary h-auto text-left w-auto py-6 px-4 m-4 rounded-xl border border-gray-600">
           <div class="object-right-top py-1 pr-4 pl-2 w-10 mb-5 rounded-md bg-gray-500 text-white font-medium text-right">{{surah.number}}</div>
           <ul>
-            <li><p class="text-3xl text-white">{{surah.name.short}}</p></li>
+            <li><p class="text-3xl text-white font-arabic">{{surah.name.short}}</p></li>
             <li><p class="text-lg text-white">{{surah.name.transliteration.id}} - {{surah.revelation.id}}</p></li>
             <li><p class="text-md text-yellow-600"><i>({{surah.name.translation.id}} : {{surah.numberOfVerses}} ayat)</i></p></li>
             <div class="surah inline">
@@ -32,9 +32,9 @@
                 <!-- <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
                   <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
                 </svg> -->
-                <img :src="toogleIcon" @click="icon = !icon" alt="">
+                <img src="/arrow-down-black.svg" alt="">
               </button>
-              <ul v-show="showTafsir[surah.number]" class="pb-3 text-gray-700 pt-1">
+              <ul v-show="showMuqaddimah[surah.number]" class="pb-3 text-gray-700 pt-1">
                 <li><a class="rounded-md bg-gray-800 text-white py-2 px-4 block whitespace-no-wrap">{{surah.tafsir.id}}</a></li>
               </ul>
             </div>
@@ -53,10 +53,9 @@ export default {
   // },
   data() {
     return {
-      showTafsir: {},
+      showMuqaddimah: {},
       surah: [],
-      searchSurah: '',
-      icon: false
+      searchSurah: ''
     }
   },
   methods: {
@@ -74,34 +73,25 @@ export default {
         });
     },
     clickShow(id) {
-      console.log('before', this.showTafsir)
-      if(this.showTafsir[id]) {
+      console.log('before', this.showMuqaddimah)
+      if(this.showMuqaddimah[id]) {
         // object baru
-        this.showTafsir = {
+        this.showMuqaddimah = {
           // object lama dipanggil lagi, lalu id nya di set ke false
-          ...this.showTafsir, 
+          ...this.showMuqaddimah, 
           [id]: false
         }
       } else {
-        this.showTafsir = {
-          ...this.showTafsir, 
+        this.showMuqaddimah = {
+          ...this.showMuqaddimah, 
           [id]: true
         }
       }
-      console.log('after', this.showTafsir)
+      console.log('after', this.showMuqaddimah)
     }
   },
   created() {
     this.getSurah()
-  },
-  computed: {
-    toogleIcon() {
-      if(this.icon) {
-        return require('/static/arrow-up-black.svg')
-      } else {
-        return require('/static/arrow-down-black.svg')
-      }
-    },
   }
 }
 </script>
