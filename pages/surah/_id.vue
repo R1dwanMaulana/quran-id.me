@@ -7,6 +7,10 @@
           <div class="object-left-top py-1 pr-4 pl-2 w-10 rounded-md bg-gray-700 text-white font-medium">{{verse.number.inSurah}}</div>
           <h3 class="pt-2 pb-3 text-white leading-loose font-arabic text-3xl tracking-wide">{{verse.text.arab}}</h3>
           <div class="text-left">
+
+              <audio :src="verse.audio.primary" controls="" v-on:play="state = 'Bermain'" v-on:pause="state = 'Berhenti Sejenak'" v-on:ended="state = 'Berhenti'">
+              </audio>
+
               <div @click="clickShowTafsir(verse.tafsir)" class="cursor-pointer focus:outline-none font-normal inline-flex items-center py-2">
                 <span class="mr-1 text-gray-400">Tafsir</span>
                 <!-- <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
@@ -16,15 +20,15 @@
               </div>
 
               <div @click="clickShow(verse.text.arab)" class="cursor-pointer focus:outline-none font-normal inline-flex items-center py-2">
-                <span class="mr-1 text-gray-400 cursor-pointer">Arti</span>
+                <span class="mr-1 ml-3 text-gray-400 cursor-pointer">Arti</span>
                 <!-- <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
                   <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
                 </svg> -->
                 <img src="/arrow-down.svg" alt="">
               </div>
               <!-- audio -->
-                <audio :src="verse.audio.primary" controls="" v-on:play="state = 'Bermain'" v-on:pause="state = 'Berhenti Sejenak'" v-on:ended="state = 'Berhenti'">
-                </audio>
+                <!-- <audio :src="verse.audio.primary" controls="" v-on:play="state = 'Bermain'" v-on:pause="state = 'Berhenti Sejenak'" v-on:ended="state = 'Berhenti'">
+                </audio> -->
               <ul v-show="showTranslate[verse.text.arab]" class="pb-3 text-gray-700 pt-1">
                 <li><a class="bg-transparent text-white py-2 block whitespace-no-wrap">{{verse.translation.id}}</a></li>
               </ul>
