@@ -63,7 +63,7 @@ export default {
           { name: "description", content: "Quran-id adalah aplikasi baca al-quran dari web browser lengkap dengan tafsir."},
           { property: "og:title", content: "Quran-id | Aplikasi Baca Al-Quran praktis dari browser"},
           { property: "og:description", content: "Quran-id adalah aplikasi baca al-quran dari web browser lengkap dengan tafsir."},
-          { property: "og:image", content: "/icon.png"},
+          { property: "og:image", content: "/meta-image.png"},
           { property: "og:site_name", content: "Quran-id"},
           { property: "og:type", content: "website"},
           { property: "og:url", content: "https://quran-id.vercel.app/"}

@@ -62,7 +62,7 @@ export default {
             { name: "description", content: "Dimulai dengan misi untuk mempermudah dalam membaca qur'an dan memahami isi tafsir." },
             { property: "og:title", content: "Tentang - Quran-id | Aplikasi Baca Al-Quran praktis dari browser" },
             { property: "og:description", content: "Dimulai dengan misi untuk mempermudah dalam membaca qur'an dan memahami isi tafsir." },
-            { property: "og:image", content: "/icon.png"},
+            { property: "og:image", content: "/meta-image.png"},
         ],
     },
 }

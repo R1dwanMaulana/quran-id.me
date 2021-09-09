@@ -43,7 +43,7 @@ export default {
             { name: "description", content: "Kumpulan doa harian dilengkapi dengan arti." },
             { property: "og:title", content: "Doa Harian - Quran-id | Aplikasi Baca Al-Quran praktis dari browser" },
             { property: "og:description", content: "Kumpulan doa harian dilengkapi dengan arti." },
-            { property: "og:image", content: "/icon.png"},
+            { property: "og:image", content: "/meta-image.png"},
         ],
     },
     data() {
