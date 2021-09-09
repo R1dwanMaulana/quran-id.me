@@ -34,8 +34,8 @@
                 </svg> -->
                 <img src="/arrow-down-black.svg" alt="">
               </button>
-              <ul v-show="showMuqaddimah[surah.number]" class="pb-3 text-gray-700 pt-1">
-                <li><a class="rounded-md bg-gray-800 text-white py-2 px-4 block whitespace-no-wrap">{{surah.tafsir.id}}</a></li>
+              <ul v-show="showMuqaddimah[surah.number]" class="pb-3 text-gray-700 pt-3 mx-1.5">
+                <li><a class="max-w-lg rounded-md bg-gray-800 text-white py-2 px-4 block whitespace-no-wrap">{{surah.tafsir.id}}</a></li>
               </ul>
             </div>
           </ul>
@@ -129,43 +129,4 @@ export default {
   align-items: center;
   text-align: center;
 }
-
-.title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 30px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-
-.arabic {
-  font-family:'Times New Roman', Times, serif
-}
-
-.bg-primary {
-  background-color: #1a2025;
-}
-
 </style>

@@ -5,7 +5,7 @@
         <!-- <div v-for="verse in surah.data.verses" :key="verse.text.arab"> -->
         <div v-for="verse in surah.data.verses" :key="verse" class="bg-gray-900 border border-transparent py-5 px-4 rounded-xl m-4 text-right">
           <div class="object-left-top py-1 pr-4 pl-2 w-10 rounded-md bg-gray-700 text-white font-medium">{{verse.number.inSurah}}</div>
-          <h3 class="pt-2 pb-3 text-white leading-loose font-arabic text-3xl tracking-wide">{{verse.text.arab}}</h3>
+          <h3 class="max-w-lg pt-2 pb-3 text-white leading-loose font-arabic text-3xl tracking-normal">{{verse.text.arab}}</h3>
           <div class="text-left">
 
               <audio :src="verse.audio.primary" controls="" v-on:play="state = 'Bermain'" v-on:pause="state = 'Berhenti Sejenak'" v-on:ended="state = 'Berhenti'">
@@ -30,11 +30,11 @@
                 <!-- <audio :src="verse.audio.primary" controls="" v-on:play="state = 'Bermain'" v-on:pause="state = 'Berhenti Sejenak'" v-on:ended="state = 'Berhenti'">
                 </audio> -->
               <ul v-show="showTranslate[verse.text.arab]" class="pb-3 text-gray-700 pt-1">
-                <li><a class="bg-transparent text-white py-2 block whitespace-no-wrap">{{verse.translation.id}}</a></li>
+                <li><a class="max-w-lg bg-transparent text-yellow-600 py-2 block whitespace-no-wrap">{{verse.translation.id}}</a></li>
               </ul>
-              <ul v-show="showTafsir[verse.tafsir]" class="pb-3 text-gray-700 pt-1">
+              <ul v-show="showTafsir[verse.tafsir]" class="pb-3 text-gray-700 pt-3">
                 <li class="text-white font-semibold">Tafsir dari kemenag:</li>
-                <li><a class="bg-transparent text-white py-2 block whitespace-no-wrap">{{verse.tafsir.id.long}}</a></li>
+                <li><a class="max-w-lg bg-transparent text-white py-2 block whitespace-no-wrap">{{verse.tafsir.id.long}}</a></li>
               </ul>
           </div>
           <!-- text-yellow-600 bg-gray-800 rounded-md py-3 px-3 -->
@@ -77,7 +77,6 @@ export default {
     },
 
     clickShowTafsir(id) {
-      console.log('before', this.showTafsir)
       if(this.showTafsir[id]) {
         this.showTafsir = {
           ...this.showTafsir, 
@@ -89,7 +88,6 @@ export default {
           [id]: true
         }
       }
-      console.log('after', this.showTafsir)
     }
   }
 }
