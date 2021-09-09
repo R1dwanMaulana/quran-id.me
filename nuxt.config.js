@@ -46,7 +46,17 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    '@nuxtjs/robots',
+    '@nuxtjs/sitemap'
   ],
+  robots: {
+    UserAgent: "*",
+    Disallow: "/img"
+  },
+  sitemap: {
+    hostname: "https://quran-id.vercel.app",
+    path: "/sitemap.xml"
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
