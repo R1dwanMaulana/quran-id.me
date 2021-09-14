@@ -2,7 +2,7 @@
     <div class="container">
         <Nav />
         <div>
-            <h3 class="bg-gray-800 py-9 px-20 rounded-md m-4 text-white font-semibold shadow-md">Kumpulan Doa Harian terjemahan Bahasa Indonesia</h3>
+            <h3 class="bg-gray-800 py-9 mx-4 px-6 rounded-md m-4 text-white font-semibold shadow-md">Kumpulan Doa Harian terjemahan Bahasa Indonesia</h3>
             <br>
             <hr>
             <input 
