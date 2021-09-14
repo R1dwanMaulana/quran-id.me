@@ -3,7 +3,7 @@
     <HeaderNav />
       <div class="pt-16">
 
-        <div v-for="verse in surah.data.verses" :key="verse" class="bg-gray-900 border-gray-600 py-5 px-4 border-t-2 text-right">
+        <div v-for="verse in surah.data.verses" :key="verse" class="bg-page border-gray-600 py-5 px-4 border-t-2 text-right">
           <div class="object-left-top py-1 pr-4 pl-2 w-10 rounded-md bg-gray-700 text-white font-medium">{{verse.number.inSurah}}</div>
           <h3 class="max-w-lg pt-2 pb-3 text-white leading-relaxed font-arabic text-4xl tracking-normal">{{verse.text.arab}}</h3>
           <div class="text-left">
@@ -82,3 +82,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.bg-page {
+  background-color: #0c0c0c;
+}
+</style>
