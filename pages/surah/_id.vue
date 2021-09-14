@@ -85,6 +85,6 @@ export default {
 
 <style scoped>
 .bg-page {
-  background-color: #0c0c0c;
+  background-color: #111111;
 }
 </style>
