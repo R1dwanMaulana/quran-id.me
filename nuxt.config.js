@@ -16,7 +16,7 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/quran.ico' },
-      { rel: "canonical", href: "https://quran-id.vercel.app"}
+      { rel: "canonical", href: "https://www.quran-id.me"}
     ]
   },
 
