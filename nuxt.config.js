@@ -55,7 +55,7 @@ export default {
     Disallow: "/img"
   },
   sitemap: {
-    hostname: "https://quran-id.vercel.app",
+    hostname: "https://www.quran-id.me",
     path: "/sitemap.xml"
   },
 
