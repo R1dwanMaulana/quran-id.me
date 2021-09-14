@@ -66,7 +66,7 @@ export default {
           { property: "og:image", content: "/meta-image.png"},
           { property: "og:site_name", content: "Quran-id"},
           { property: "og:type", content: "website"},
-          { property: "og:url", content: "https://quran-id.vercel.app/"}
+          { property: "og:url", content: "https://www.quran-id.me"}
       ],
     },
   data() {
