@@ -21,13 +21,13 @@
             <li><p class="text-md text-yellow-600"><i>({{surah.name.translation.id}} : {{surah.numberOfVerses}} ayat)</i></p></li>
             <div class="surah inline">
               <button @click="$router.push({name: 'surah-id', params:{id:surah.number},})"
-                class="mt-3 btn-click focus:outline-none bg-blue-500 text-white shadow-sm hover:shadow-none rounded-md font-normal py-2 px-4 rounded-md"
+                class="mt-3 btn-click focus:outline-none bg-blue-500 text-white shadow-sm hover:shadow-none rounded-md font-normal py-2 px-3 rounded-lg"
               >
                 Baca surah
               </button>
             </div>
             <div class="dropdown inline">
-              <button @click="clickShow(surah.number)" class="bg-gray-200 focus:outline-none shadow-sm hover:shadow-none rounded-md text-gray-700 font-normal py-2 px-4 rounded inline-flex items-center">
+              <button @click="clickShow(surah.number)" class="bg-gray-200 focus:outline-none shadow-sm hover:shadow-none rounded-md text-gray-700 font-normal py-2 px-3 rounded-lg inline-flex items-center">
                 <span class="mr-1">Muqaddimah</span>
                 <!-- <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
                   <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
