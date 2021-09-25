@@ -15,12 +15,12 @@
             <p class="text-left m-4 font-medium text-white">List Doa Tahlil :</p>
             <div v-for="tahlil in doatahlil" :key="tahlil.data" class="bg-primary h-auto text-left w-11/12 py-5 px-4 m-4 rounded-xl border border-gray-600">
                 
-                    <p @click="clickShow(tahlil.title)" class="text-lg items-center text-white inset-x-0 flex justify-between">{{tahlil.title}} <svg xmlns="http://www.w3.org/2000/svg" class="inline h-4 w-4 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                    <p @click="clickShow(tahlil.id)" class="max-w-lg text-lg items-center text-white inset-x-0 flex justify-between">{{tahlil.title}} <svg xmlns="http://www.w3.org/2000/svg" class="inline h-4 w-4 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
                     </svg></p>
                 
                     <!-- <div class="dropdown"> -->
-                        <ul v-show="showTahlil[tahlil.title]" class="pb-3 text-gray-700 pt-1">
+                        <ul v-show="showTahlil[tahlil.id]" class="pb-3 text-gray-700 pt-1">
                             <li>
                                 <p class="max-w-lg rounded-md text-white py-3 px-4 block whitespace-no-wrap text-right text-3xl leading-relaxed font-arabic tracking-wide">{{tahlil.arabic}}</p>
                             </li>
@@ -35,14 +35,14 @@
 <script>
 export default {
     head: {
-        title: 'Doa Harian - Quran-id | Aplikasi Baca Al-Quran praktis dari browser',
+        title: 'Doa Tahlil - Quran-id | Aplikasi Baca Al-Quran praktis dari browser',
         meta: [
-            { hid: "description", name: "description", content: "Kumpulan doa harian dilengkapi dengan arti." },
+            { hid: "description", name: "description", content: "Kumpulan doa tahlil dilengkapi dengan arti." },
             { name: "format-detection", content: "telephone=no" },
 	        { name: "author", content: "Quran-id"},
-            { name: "description", content: "Kumpulan doa harian dilengkapi dengan arti." },
-            { property: "og:title", content: "Doa Harian - Quran-id | Aplikasi Baca Al-Quran praktis dari browser" },
-            { property: "og:description", content: "Kumpulan doa harian dilengkapi dengan arti." },
+            { name: "description", content: "Kumpulan doa tahli dilengkapi dengan arti." },
+            { property: "og:title", content: "Doa Tahlil - Quran-id | Aplikasi Baca Al-Quran praktis dari browser" },
+            { property: "og:description", content: "Kumpulan doa tahlil dilengkapi dengan arti." },
             { property: "og:image", content: "/meta-image.png"},
         ],
     },
