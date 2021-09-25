@@ -14,7 +14,7 @@
               <audio :src="verse.audio.primary" controls="" v-on:play="state = 'Bermain'" v-on:pause="state = 'Berhenti Sejenak'" v-on:ended="state = 'Berhenti'">
               </audio>
 
-              <div @click="clickShowTafsir(verse.tafsir)" class="cursor-pointer focus:outline-none font-normal inline-flex items-center py-2">
+              <div @click="clickShowTafsir(verse.text.arab)" class="cursor-pointer focus:outline-none font-normal inline-flex items-center py-2">
                 <span class="mr-1 text-gray-400">Tafsir</span>
                 <img src="/arrow-down.svg" alt="">
               </div>
@@ -27,7 +27,7 @@
               <ul v-show="showTranslate[verse.text.arab]" class="pb-3 text-gray-700 pt-1">
                 <li><a class="max-w-lg bg-transparent text-white py-2 block whitespace-no-wrap">{{verse.translation.id}}</a></li>
               </ul>
-              <ul v-show="showTafsir[verse.tafsir]" class="pb-3 text-gray-700 pt-3">
+              <ul v-show="showTafsir[verse.text.arab]" class="pb-3 text-gray-700 pt-3">
                 <li class="text-white font-semibold">Tafsir dari kemenag:</li>
                 <li><a class="max-w-lg bg-transparent text-white py-2 block whitespace-no-wrap">{{verse.tafsir.id.long}}</a></li>
               </ul>
