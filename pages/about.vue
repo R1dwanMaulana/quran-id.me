@@ -13,7 +13,7 @@
                         <a href="https://github.com/sutanlab/quran-api" target="_blank">Quran API
                         </a>
                     </span> 
-                    dari Sutanlab untuk sumber data Al Qur'an.
+                    untuk sumber data Al Qur'an.
                 </li>  
             </ul>
             <ul>
@@ -21,7 +21,7 @@
                     - <span class="text-green-600">
                         <a href="https://github.com/Zhirrr/islamic-rest-api-indonesian-v2" target="_blank">Islamic Rest API Indonesia V2
                         </a>
-                    </span> dari Zhirrr untuk sumber data Do'a Harian.
+                    </span> untuk sumber data Do'a Harian.
                 </li>  
             </ul>
             <ul>
@@ -30,6 +30,14 @@
                         <a href="https://quran.kemenag.go.id/" target="_blank">Quran Kemenag
                         </a>
                     </span> dari Kemenag RI untuk sumber data tafsir surah.
+                </li>  
+            </ul>
+            <ul>
+                <li class="text-white">
+                    - <span class="text-green-600">
+                        <a href="https://quran.kemenag.go.id/" target="_blank">islam.nu.or.id
+                        </a>
+                    </span> untuk sumber data bacaan tahlil.
                 </li>  
             </ul>
             </div>
