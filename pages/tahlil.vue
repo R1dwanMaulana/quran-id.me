@@ -5,13 +5,7 @@
             <h3 class="bg-gray-800 py-9 mx-4 px-6 rounded-md m-4 text-white font-semibold shadow-md">Doa Tahlil terjemahan Bahasa Indonesia</h3>
             <br>
             <hr>
-            <input 
-                v-model="searchDoaTahlil"
-                type="search"
-                placeholder="Cari doa tahlil"
-                @keyup="getDoaTahlil"
-                class="mt-8 py-3 px-3 w-11/12 m-3 truncate leading-5 font-medium placeholder-gray-400 border-transparent text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-700 border border-gray-600 focus:border-blue-500 rounded-md focus:outline-none bg-gray-800"
-            />
+            
             <p class="text-left m-4 font-medium text-white">List Doa Tahlil :</p>
             <div v-for="tahlil in doatahlil" :key="tahlil.data" class="bg-primary h-auto text-left w-11/12 py-5 px-4 m-4 rounded-xl border border-gray-600">
                 
@@ -46,27 +40,19 @@ export default {
             { property: "og:image", content: "/meta-image.png"},
         ],
     },
+    async asyncData() {
+        const resp = await import('~/data/tahlil.json')
+        return {
+            doatahlil: resp.data
+        }
+    },
     data() {
         return {
             showTahlil: {},
             doatahlil: [],
-            searchDoaTahlil: ''
         }
     },
     methods: {
-        getDoaTahlil() {
-            fetch("https://islamic-api-indonesia.herokuapp.com/api/data/json/tahlil/")
-            .then(response => response.json())
-            .then(res => {
-                if(this.searchDoaTahlil) {
-                    this.doatahlil = res.result.data.filter(doatahlil => 
-                        doatahlil.title.toLowerCase().includes(this.searchDoaTahlil.toLowerCase())
-                );
-                } else {
-                    this.doatahlil = res.result.data;
-                }
-            });
-        },
         clickShow(id) {
             if(this.showTahlil[id]) {
                 this.showTahlil = {
@@ -80,9 +66,6 @@ export default {
                 }
             }
         }
-    },
-    created() {
-        this.getDoaTahlil()
     }
 }
 
