@@ -16,14 +16,14 @@
                     untuk sumber data Al Qur'an.
                 </li>  
             </ul>
-            <ul>
+            <!-- <ul>
                 <li class="text-white">
                     - <span class="text-green-600">
                         <a href="https://github.com/Zhirrr/islamic-rest-api-indonesian-v2" target="_blank">Islamic Rest API Indonesia V2
                         </a>
                     </span> untuk sumber data Do'a Harian.
                 </li>  
-            </ul>
+            </ul> -->
             <ul>
                 <li class="text-white">
                     - <span class="text-green-600">
