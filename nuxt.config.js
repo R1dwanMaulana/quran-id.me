@@ -61,7 +61,7 @@ export default {
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    baseURL: 'https://api.quran.sutanlab.id'
+    baseURL: 'https://api.quran.gading.dev'
   },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
