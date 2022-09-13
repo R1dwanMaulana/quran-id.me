@@ -9,6 +9,7 @@
         <div v-for="verse in surah.data.verses" :key="verse" class="bg-page border-gray-600 py-5 px-4 border-t-2 text-right">
           <div class="object-left-top py-1 pr-4 pl-2 w-10 rounded-md bg-gray-700 text-white font-medium">{{verse.number.inSurah}}</div>
           <h3 class="max-w-lg pt-2 pb-3 text-white leading-relaxed font-arabic text-4xl tracking-normal">{{verse.text.arab}}</h3>
+          <p class="text-left max-w-md text-gray-300 pt-2 pb-8 text-white leading-relaxed tracking-normal">{{verse.text.transliteration.en}}</p>
           <div class="text-left">
 
               <audio :src="verse.audio.primary" controls="" v-on:play="state = 'Bermain'" v-on:pause="state = 'Berhenti Sejenak'" v-on:ended="state = 'Berhenti'">
