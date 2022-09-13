@@ -78,7 +78,7 @@ export default {
   },
   methods: {
     getSurah() {
-      fetch("https://api.quran.sutanlab.id/surah")
+      fetch("https://api.quran.gading.dev/surah")
         .then(response => response.json())
         .then(res => {
           if(this.searchSurah) {
