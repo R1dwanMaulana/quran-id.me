@@ -3,8 +3,8 @@
 📖 Aplikasi Al-Qur'an praktis dari Web Browser + support install(app native)
 
 ## Preview
-<img src="/static/mobile2.png" width="200px">
-<img src="/static/mobile1.png" width="200px">
+<img src="static/mobile (2).png" width="200px"> <br></br>
+<img src="static/mobile (3).png" width="200px">
 
 ```bash
 # install dependencies
