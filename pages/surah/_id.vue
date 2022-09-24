@@ -2,18 +2,18 @@
   <div class="container">
     <HeaderNav />
       <div class="pt-16">
-        <div v-for="verse in surah.data.preBismillah" :key="verse.text" class="bg-page border-gray-600 px-4 text-center">
+        <div v-for="verse in surah.data.preBismillah" :key="verse.text" class="bg-black px-4 text-center">
           <h3 class="max-w-lg pt-2 text-yellow-600 leading-relaxed font-arabic text-4xl tracking-normal">{{verse.arab}}</h3>
         </div>
         <!-- <div>{{surah.preBismillah.text.arab}}</div> -->
-        <div v-for="verse in surah.data.verses" :key="verse" class="bg-page border-gray-600 py-5 px-4 border-t-2 text-right">
-          <div class="object-left-top py-1 pr-4 pl-2 w-10 rounded-md bg-gray-700 text-white font-medium">{{verse.number.inSurah}}</div>
-          <h3 class="max-w-lg pt-2 pb-3 text-white leading-relaxed font-arabic text-4xl tracking-normal">{{verse.text.arab}}</h3>
+        <div v-for="verse in surah.data.verses" :key="verse" class="bg-black border-gray-600 py-5 px-4 border-t-2 text-right">
+          <!-- <div class="object-left-top py-1 pr-4 pl-2 w-10 rounded-md bg-gray-700 text-white font-medium">{{verse.number.inSurah}}</div> -->
+          <h3 class="max-w-lg pt-2 pb-3 text-white leading-relaxed font-arabic text-4xl tracking-normal">{{verse.text.arab}}<span class="m-2 bg-yellow-800 rounded-md px-2 py-1 text-base">{{verse.number.inSurah}}</span></h3>
           <p class="text-left max-w-md text-gray-300 pt-2 pb-8 leading-relaxed tracking-normal">{{verse.text.transliteration.en}}</p>
           <div class="text-left">
 
-              <audio :src="verse.audio.primary" controls="" v-on:play="state = 'Bermain'" v-on:pause="state = 'Berhenti Sejenak'" v-on:ended="state = 'Berhenti'">
-              </audio>
+              <!-- <audio :src="verse.audio.primary" controls="" v-on:play="state = 'Bermain'" v-on:pause="state = 'Berhenti Sejenak'" v-on:ended="state = 'Berhenti'">
+              </audio> -->
 
               <div @click="clickShowTafsir(verse.text.arab)" class="cursor-pointer focus:outline-none font-normal inline-flex items-center py-2">
                 <span class="mr-1 text-gray-400">Tafsir</span>
@@ -44,7 +44,7 @@ export default {
     return {
       showTranslate: {},
       showTafsir: {},
-      state: 'Berhenti',
+      // state: 'Berhenti',
       // verse: {}
     }
   },

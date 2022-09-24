@@ -2,7 +2,7 @@
   <div class="container">
     <Nav />
     <div>
-      <h3 class="bg-gray-800 py-9 px-4 rounded-md m-4 text-white font-semibold shadow-md">Aplikasi Qur'an terjemahan Bahasa Indonesia lengkap dengan Tafsir</h3>
+      <h3 class="bg-gray-900 py-9 px-4 rounded-md m-4 text-white font-semibold shadow-md">Aplikasi Qur'an terjemahan Bahasa Indonesia lengkap dengan Tafsir</h3>
       <br>
       <hr>
       <input 
